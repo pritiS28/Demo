@@ -4,6 +4,14 @@
 
 import UIKit
 
+enum shadowPosition {
+    case top
+    case bottom
+    case left
+    case right
+    case full
+    case line
+}
 
 extension UIView {
     
@@ -297,7 +305,7 @@ extension UIView {
     func addHorizontalDashedLine() {
         //Create a CAShapeLayer
         let shapeLayer = CAShapeLayer()
-        shapeLayer.strokeColor = AppColor.AppVioletColor.color.cgColor
+        shapeLayer.strokeColor = UIColor.blue.cgColor
         shapeLayer.lineWidth = 2
         // passing an array with the values [2,3] sets a dash pattern that alternates between a 2-user-space-unit-long painted segment and a 3-user-space-unit-long unpainted segment
         shapeLayer.lineDashPattern = [5,3]
